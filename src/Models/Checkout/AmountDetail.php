@@ -1,10 +1,10 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel\Models\Checkout;
+namespace Stonedleaf\PaymayaCheckoutLaraplate\Models\Checkout;
 
 use JsonSerializable;
 use Money\Money;
-use Stonedleaf\PaymayaLaravel\Paymaya;
+use Stonedleaf\PaymayaCheckoutLaraplate\Paymaya;
 
 class AmountDetail implements JsonSerializable
 {

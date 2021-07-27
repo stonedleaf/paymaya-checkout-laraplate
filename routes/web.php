@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Stonedleaf\PaymayaLaravel\Http\Controllers\WebhookController;
+use Stonedleaf\PaymayaCheckoutLaraplate\Http\Controllers\WebhookController;
 
 Route::prefix('webhook')->name('webhook.')->group(function() {
     Route::prefix('checkout')->name('checkout.')->group(function() {

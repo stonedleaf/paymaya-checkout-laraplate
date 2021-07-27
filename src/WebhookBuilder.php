@@ -1,6 +1,6 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel;
+namespace Stonedleaf\PaymayaCheckoutLaraplate;
 
 class WebhookBuilder
 {
@@ -45,7 +45,7 @@ class WebhookBuilder
      * Add webhook
      * 
      * @return array
-     * @throws \Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException
+     * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     public function create()
     {
@@ -62,7 +62,7 @@ class WebhookBuilder
      * Update webhook
      * 
      * @return array
-     * @throws \Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException
+     * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     public function update()
     {
@@ -78,7 +78,7 @@ class WebhookBuilder
      * Delete webhook
      * 
      * @return array
-     * @throws \Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException
+     * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     public function delete()
     {
@@ -91,7 +91,7 @@ class WebhookBuilder
      * Get webhooks
      * 
      * @return array
-     * @throws \Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException
+     * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     public static function get()
     {

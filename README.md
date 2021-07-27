@@ -1,3 +1,4 @@
+
 # paymaya-checkout-laraplate
 
 Basic Laravel boiler plate for consuming PayMaya checkout APIs.
@@ -15,6 +16,11 @@ Install using composer
 composer require stonedleaf/paymaya-checkout-laraplate
 ```
 
+Publish the files
+```bash
+php artisan vendor:publish --provider=Stonedleaf\PaymayaLaravel\PaymayaServiceProvider
+```
+
 To register the webhooks, run the following command (Note: this will remove existing webhooks)
 ```bash
 php artisan paymaya:webhook
@@ -22,7 +28,54 @@ php artisan paymaya:webhook
 
 ## Configuration
 
-Kindly check config/paymaya.php
+**Configuration File**
+
+Kindly check `config/paymaya.php`
+
+**Overriding Transaction Model**
+
+To use your own transaction model, inform your new transaction model in your application's `App\Providers\AppServiceProvider` class using the following code as reference
+
+  ```php
+use App\Models\PayMaya\Transaction;
+
+public function boot()
+{
+    Paymaya::useTransactionModel(Transaction::class);
+}
+```
+
+**Overriding Migrations**
+
+If you would like to prevent the default migrations from running, you may use `ignoreMigrations`. Usually this should be called in the `register` method of your `AppServiceProvider`
+
+  ```php
+use Stonedleaf\PaymayaLaravel\Paymaya;
+
+public function register()
+{
+    Paymaya::ignoreMigrations();
+}
+```
+
+Afterwards, you may use your own migrations. Make sure you replaced the transaction model above
+
+**Overriding Routes**
+
+If you would like to prevent the default routes from running, you may use `ignoreMigrations`. Usually this should be called in the `register` method of your `AppServiceProvider`
+
+  ```php
+use Stonedleaf\PaymayaLaravel\Paymaya;
+
+public function register()
+{
+    Paymaya::ignoreRoutes();
+}
+```
+
+Afterwards, make sure you point the `webhook_routes` setting in `config/paymaya.php` to the correct routes.
+
+For webhook controller reference, you may check `Stonedleaf\PaymayaLaravel\Http\Controllers\WebhookController.php`
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

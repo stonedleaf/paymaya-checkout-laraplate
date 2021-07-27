@@ -1,6 +1,6 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel\Exceptions;
+namespace Stonedleaf\PaymayaCheckoutLaraplate\Exceptions;
 
 use Exception;
 

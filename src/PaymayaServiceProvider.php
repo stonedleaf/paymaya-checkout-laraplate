@@ -1,10 +1,10 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel;
+namespace Stonedleaf\PaymayaCheckoutLaraplate;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Stonedleaf\PaymayaLaravel\Console\Commands\InstallWebhook;
+use Stonedleaf\PaymayaCheckoutLaraplate\Console\Commands\InstallWebhook;
 
 class PaymayaServiceProvider extends ServiceProvider
 {
@@ -42,7 +42,7 @@ class PaymayaServiceProvider extends ServiceProvider
         if (Paymaya::$registerRoutes) {
             Route::group([
                 'prefix' => config('paymaya.path'),
-                'namespace' => 'Stonedleaf\PaymayaLaravel\Http\Controllers',
+                'namespace' => 'Stonedleaf\PaymayaCheckoutLaraplate\Http\Controllers',
                 'as' => 'paymaya.',
             ], function () {
                 $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
