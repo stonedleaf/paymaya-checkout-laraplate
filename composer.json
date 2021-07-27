@@ -27,5 +27,7 @@
                 "Stonedleaf\\PaymayaLaravel\\PaymayaServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
