@@ -2,6 +2,11 @@
     "name": "stonedleaf/paymaya-checkout-laraplate",
     "keywords": ["laravel", "paymaya", "checkout"],
     "description": "Basic laravel boiler plate for consuming Paymaya checkout APIs",
+    "authors": [
+        {
+            "name": "stonedleaf"
+        }
+    ],
     "require": {
         "php": "^7.2|^8.0",
         "ext-json": "*",
