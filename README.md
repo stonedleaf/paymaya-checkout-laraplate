@@ -18,7 +18,7 @@ composer require stonedleaf/paymaya-checkout-laraplate
 
 Publish the files
 ```bash
-php artisan vendor:publish --provider=Stonedleaf\PaymayaLaravel\PaymayaServiceProvider
+php artisan vendor:publish --provider=Stonedleaf\PaymayaCheckoutLaraplate\PaymayaServiceProvider
 ```
 
 To register the webhooks, run the following command (Note: this will remove existing webhooks)
@@ -50,7 +50,7 @@ public function boot()
 If you would like to prevent the default migrations from running, you may use `ignoreMigrations`. Usually this should be called in the `register` method of your `AppServiceProvider`
 
   ```php
-use Stonedleaf\PaymayaLaravel\Paymaya;
+use Stonedleaf\PaymayaCheckoutLaraplate\Paymaya;
 
 public function register()
 {
@@ -65,7 +65,7 @@ Afterwards, you may use your own migrations. Make sure you replaced the transact
 If you would like to prevent the default routes from running, you may use `ignoreMigrations`. Usually this should be called in the `register` method of your `AppServiceProvider`
 
   ```php
-use Stonedleaf\PaymayaLaravel\Paymaya;
+use Stonedleaf\PaymayaCheckoutLaraplate\Paymaya;
 
 public function register()
 {
@@ -75,7 +75,13 @@ public function register()
 
 Afterwards, make sure you point the `webhook_routes` setting in `config/paymaya.php` to the correct routes.
 
-For webhook controller reference, you may check `Stonedleaf\PaymayaLaravel\Http\Controllers\WebhookController.php`
+For webhook controller reference, you may check `Stonedleaf\PaymayaCheckoutLaraplate\Http\Controllers\WebhookController.php`
+
+## Examples
+
+< under construction >
+
+For API, you may checkout `Stonedleaf\PaymayaCheckoutLaraplate\CheckoutBuilder.php`
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
