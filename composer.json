@@ -23,7 +23,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Stonedleaf\\PaymayaLaravel\\": "src/"
+            "Stonedleaf\\PaymayaCheckoutLaraplate\\": "src/"
         }
     },
     "extra": {
