@@ -9,13 +9,6 @@ use Stonedleaf\PaymayaCheckoutLaraplate\Models\General\RedirectUrl;
 class CheckoutBuilder
 {
     /**
-     * The Payment model the checkout belongs to
-     * 
-     * @var \Stonedleaf\PaymayaCheckoutLaraplate\Payment
-     */
-    protected $payment;
-
-    /**
      * @var string
      */
     protected $id;
@@ -62,54 +55,58 @@ class CheckoutBuilder
      */
     protected $metadata;
 
-    public function __construct($payment)
-    {
-        $this->payment = $payment;
-    }
-
     public function setId($id)
     {
         $this->id = $id;
+        return $this;
     }
 
     public function setTotalAmount(TotalAmount $totalAmount)
     {
         $this->totalAmount = $totalAmount;
+        return $this;
     }
 
     public function setBuyer(Buyer $buyer)
     {
         $this->buyer = $buyer;
+        return $this;
     }
 
     public function setItems(array $items)
     {
         $this->items = $items;
+        return $this;
     }
 
     public function setRequestReferenceNumber($requestReferenceNumber)
     {
         $this->requestReferenceNumber = $requestReferenceNumber;
+        return $this;
     }
 
     public function setRedirectUrl(RedirectUrl $redirectUrl)
     {
         $this->redirectUrl = $redirectUrl;
+        return $this;
     }
 
     public function setStatus($status)
     {
         $this->status = $status;
+        return $this;
     }
 
     public function setPaymentStatus($paymentStatus)
     {
         $this->paymentStatus = $paymentStatus;
+        return $this;
     }
 
     public function setMetadata($metadata)
     {
         $this->metadata = $metadata;
+        return $this;
     }
 
     /**
