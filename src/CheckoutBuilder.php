@@ -112,7 +112,7 @@ class CheckoutBuilder
     /**
      * Create checkout transaction
      * 
-     * @return Paymaya::$transactionModel
+     * @return \Illuminate\Database\Eloquent\Model
      * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     public function create()

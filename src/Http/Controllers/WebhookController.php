@@ -95,7 +95,7 @@ class WebhookController extends Controller
     /**
      * 
      * @param string $transactionId
-     * @return Paymaya::$transactionModel
+     * @return \Illuminate\Database\Eloquent\Model
      */
     protected function getTransaction(string $transactionId)
     {
