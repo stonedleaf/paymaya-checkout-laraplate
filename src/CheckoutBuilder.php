@@ -142,7 +142,7 @@ class CheckoutBuilder
      */
     public function get()
     {
-        $response = Paymaya::get('/checkout/v1/checkouts/' . $this->payment->transaction_id);
+        $response = Paymaya::get('/checkout/v1/checkouts/' . $this->id);
 
         return $response->json();
     }
