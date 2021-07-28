@@ -1,17 +1,17 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel;
+namespace Stonedleaf\PaymayaCheckoutLaraplate;
 
-use Stonedleaf\PaymayaLaravel\Models\Checkout\Buyer;
-use Stonedleaf\PaymayaLaravel\Models\Checkout\TotalAmount;
-use Stonedleaf\PaymayaLaravel\Models\General\RedirectUrl;
+use Stonedleaf\PaymayaCheckoutLaraplate\Models\Checkout\Buyer;
+use Stonedleaf\PaymayaCheckoutLaraplate\Models\Checkout\TotalAmount;
+use Stonedleaf\PaymayaCheckoutLaraplate\Models\General\RedirectUrl;
 
 class CheckoutBuilder
 {
     /**
      * The Payment model the checkout belongs to
      * 
-     * @var \Stonedleaf\PaymayaLaravel\Payment
+     * @var \Stonedleaf\PaymayaCheckoutLaraplate\Payment
      */
     protected $payment;
 
@@ -116,7 +116,7 @@ class CheckoutBuilder
      * Create checkout transaction
      * 
      * @return Paymaya::$transactionModel
-     * @throws \Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException
+     * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     public function create()
     {
@@ -141,7 +141,7 @@ class CheckoutBuilder
      * Get checkout information
      * 
      * @return array
-     * @throws \Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException
+     * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     public function get()
     {

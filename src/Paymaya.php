@@ -1,12 +1,12 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel;
+namespace Stonedleaf\PaymayaCheckoutLaraplate;
 
 use Illuminate\Support\Facades\Http;
 use Money\Currencies\ISOCurrencies;
 use Money\Formatter\DecimalMoneyFormatter;
 use Money\Money;
-use Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException;
+use Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class Paymaya
@@ -49,7 +49,7 @@ class Paymaya
      * @param array $payload
      * 
      * @return \Illuminate\Http\Client\Response
-     * @throws \Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException
+     * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     public static function get(string $uri, array $payload = [])
     {
@@ -64,7 +64,7 @@ class Paymaya
      * @param bool $useSecret
      * 
      * @return \Illuminate\Http\Client\Response
-     * @throws \Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException
+     * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     public static function post($uri, array $payload = [], $useSecret = false)
     {
@@ -81,7 +81,7 @@ class Paymaya
      * @param array $payload
      * 
      * @return \Illuminate\Http\Client\Response
-     * @throws \Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException
+     * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     public static function put($uri, array $payload = [])
     {
@@ -94,7 +94,7 @@ class Paymaya
      * @param string $uri
      * 
      * @return \Illuminate\Http\Client\Response
-     * @throws \Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException
+     * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     public static function delete($uri)
     {
@@ -109,7 +109,7 @@ class Paymaya
      * @param array $payload
      * @return \Illuminate\Http\Client\Response
      * 
-     * @throws \Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException
+     * @throws \Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException
      */
     protected static function makeApiCall($method, $uri, $key, array|null $payload = [])
     {
@@ -140,6 +140,26 @@ class Paymaya
         $formatter = new DecimalMoneyFormatter(new ISOCurrencies());
 
         return $formatter->format($money);
+    }
+
+    /**
+     * Configureto not register its migrations.
+     *
+     * @return void
+     */
+    public static function ignoreMigrations()
+    {
+        static::$runMigrations = false;
+    }
+
+    /**
+     * Configure to not register its routes.
+     *
+     * @return void
+     */
+    public static function ignoreRoutes()
+    {
+        static::$registerRoutes = false;
     }
 
     /**

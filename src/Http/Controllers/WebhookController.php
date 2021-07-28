@@ -1,6 +1,6 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel\Http\Controllers;
+namespace Stonedleaf\PaymayaCheckoutLaraplate\Http\Controllers;
 
 use Carbon\Carbon;
 use Exception;
@@ -8,12 +8,12 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
 use Money\Money;
-use Stonedleaf\PaymayaLaravel\Events\CheckoutExpired;
-use Stonedleaf\PaymayaLaravel\Events\CheckoutFailed;
-use Stonedleaf\PaymayaLaravel\Events\CheckoutSucceeded;
-use Stonedleaf\PaymayaLaravel\Events\WebhookReceived;
-use Stonedleaf\PaymayaLaravel\Exceptions\InvalidPayloadException;
-use Stonedleaf\PaymayaLaravel\Paymaya;
+use Stonedleaf\PaymayaCheckoutLaraplate\Events\CheckoutExpired;
+use Stonedleaf\PaymayaCheckoutLaraplate\Events\CheckoutFailed;
+use Stonedleaf\PaymayaCheckoutLaraplate\Events\CheckoutSucceeded;
+use Stonedleaf\PaymayaCheckoutLaraplate\Events\WebhookReceived;
+use Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\InvalidPayloadException;
+use Stonedleaf\PaymayaCheckoutLaraplate\Paymaya;
 use Symfony\Component\HttpFoundation\Response;
 
 class WebhookController extends Controller

@@ -1,6 +1,6 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel\Models\General;
+namespace Stonedleaf\PaymayaCheckoutLaraplate\Models\General;
 
 use JsonSerializable;
 

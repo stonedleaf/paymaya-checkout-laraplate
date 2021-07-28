@@ -1,12 +1,12 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel\Console\Commands;
+namespace Stonedleaf\PaymayaCheckoutLaraplate\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Route;
-use Stonedleaf\PaymayaLaravel\Exceptions\PaymayaAPIException;
-use Stonedleaf\PaymayaLaravel\WebhookBuilder;
+use Stonedleaf\PaymayaCheckoutLaraplate\Exceptions\PaymayaAPIException;
+use Stonedleaf\PaymayaCheckoutLaraplate\WebhookBuilder;
 
 class InstallWebhook extends Command
 {

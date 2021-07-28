@@ -1,6 +1,6 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel;
+namespace Stonedleaf\PaymayaCheckoutLaraplate;
 
 use Illuminate\Database\Eloquent\Model;
 

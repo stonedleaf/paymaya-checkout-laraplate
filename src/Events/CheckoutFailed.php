@@ -1,6 +1,6 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel\Events;
+namespace Stonedleaf\PaymayaCheckoutLaraplate\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;

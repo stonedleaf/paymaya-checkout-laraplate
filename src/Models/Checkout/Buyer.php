@@ -1,10 +1,10 @@
 <?php
 
-namespace Stonedleaf\PaymayaLaravel\Models\Checkout;
+namespace Stonedleaf\PaymayaCheckoutLaraplate\Models\Checkout;
 
 use JsonSerializable;
-use Stonedleaf\PaymayaLaravel\Models\General\Address;
-use Stonedleaf\PaymayaLaravel\Models\General\Contact;
+use Stonedleaf\PaymayaCheckoutLaraplate\Models\General\Address;
+use Stonedleaf\PaymayaCheckoutLaraplate\Models\General\Contact;
 
 class Buyer implements JsonSerializable
 {
