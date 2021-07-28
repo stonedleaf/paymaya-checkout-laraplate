@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Stonedleaf\\PaymayaLaravel\\PaymayaServiceProvider"
+                "Stonedleaf\\PaymayaCheckoutLaraplate\\PaymayaServiceProvider"
             ]
         }
     },
