@@ -1,6 +1,8 @@
 
 # paymaya-checkout-laraplate
 
+![Packagist version](https://img.shields.io/packagist/v/stonedleaf/paymaya-checkout-laraplate) ![License](https://img.shields.io/packagist/l/stonedleaf/paymaya-checkout-laraplate) ![enter image description here](https://img.shields.io/packagist/dt/stonedleaf/paymaya-checkout-laraplate)
+
 Basic Laravel boiler plate for consuming PayMaya checkout APIs.
 
 Includes:
