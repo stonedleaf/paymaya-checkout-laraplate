@@ -4,6 +4,7 @@ namespace Stonedleaf\PaymayaCheckoutLaraplate;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Stonedleaf\PaymayaCheckoutLaraplate\Console\Commands\ClearSettings;
 use Stonedleaf\PaymayaCheckoutLaraplate\Console\Commands\InstallWebhook;
 
 class PaymayaServiceProvider extends ServiceProvider
@@ -73,7 +74,7 @@ class PaymayaServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../config/paymaya.php' => $this->app->configPath('paymaya.php'),
             ]);
-            $this->commands([InstallWebhook::class]);
+            $this->commands([InstallWebhook::class,ClearSettings::class]);
         }
     }
 }
