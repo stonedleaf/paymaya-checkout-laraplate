@@ -26,6 +26,11 @@ To register the webhooks, run the following command (Note: this will remove exis
 php artisan paymaya:webhook
 ```
 
+To delete all paymaya API settings (Webhook and Shop Customizations), run the following command
+```bash
+php artisan paymaya:clear
+```
+
 ## Configuration
 
 **Configuration File**
